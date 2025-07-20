@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Key Shortcut Web Component</title>
+    <!--  <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/vite.svg"
+    /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Key Shortcut Web Component"
+    />
+    <link
+      rel="canonical"
+      href="https://octaedlp00.github.io/RGBToPercentageConverter"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <script
+      type="module"
+      src="main.ts"
+    ></script>
+  </head>
+  <body class="h-dvh">
+    <div
+      class="grid h-full place-content-center [&>:nth-child(-n+3)]:mb-5"
+      id="app"
+    >
+      <div>
+        <key-shortcut keys="ctrl+alt+x x"></key-shortcut>
+      </div>
+      <div>
+        <key-shortcut keys="ctrl+shift+x"></key-shortcut>
+      </div>
+      <div>
+        <key-shortcut
+          mac
+          keys="ctrl+alt+x x"
+        ></key-shortcut>
+      </div>
+      <div>
+        <key-shortcut keys="cmd+shift+x"></key-shortcut>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+:host {
+  --keyboard-font: consolas, monospace;
+  --keyboard-weight: 500;
+  --keyboard-color-light: white;
+  --keyboard-bg-light: #444;
+  --keyboard-color-dark: #444;
+  --keyboard-bg-dark: white;
+  --keyboard-font-size: 1.45rem;
+  --keyboard-shadow-light: #444;
+  --keyboard-shadow-dark: white;
+  --keyboard-shadow-light-press: #444;
+  --keyboard-shadow-dark-press: white;
+
+  display: inline-block;
+  font-size: var(--keyboard-font-size);
+  font-weight: var(--keyboard-weight);
+  text-rendering: optimizeLegibility;
+}
+
+.shortcut-sequence {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  color: light-dark(var(--keyboard-color-light), var(--keyboard-color-dark));
+  font-size: var(--keyboard-font-size);
+  line-height: 1;
+}
+
+.combo {
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+kbd {
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 0 0.75px;
+  background-color: light-dark(var(--keyboard-bg-light, #e2e5e9), var(--keyboard-bg-dark, #2a2d30));
+  border: 1px solid light-dark(#b4b4b4, #444);
+  border-top: 2px solid light-dark(#fff, #444);
+  border-bottom: 3px solid light-dark(#999, #111);
+  border-radius: 6px;
+  box-shadow:
+    0 3px 0 light-dark(var(--keyboard-shadow-light), var(--keyboard-shadow-dark)),
+    0 3px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
+  user-select: none;
+  cursor: default;
+  transition:
+    transform 0.05s ease,
+    box-shadow 0.05s ease;
+}
+
+kbd:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 1px 0 light-dark(var(--keyboard-shadow-light), var(--keyboard-shadow-dark)),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+  border-bottom-width: 1px;
+}
+
+kbd:hover {
+  filter: brightness(1.1);
+}
+
+kbd.pressed {
+  transform: translateY(2px);
+  box-shadow:
+    0 1px 0 light-dark(var(--keyboard-shadow-light-press), var(--keyboard-shadow-dark-press)),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+  border-bottom-width: 1px;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}

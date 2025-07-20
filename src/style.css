@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+@themes {
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+key-shortcut {
+  --keyboard-font: 'Cascadia Code PL', consolas;
+  --keyboard-weight: 600;
+}
