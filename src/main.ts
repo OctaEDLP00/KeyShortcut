@@ -1,1 +1,1 @@
-import './components/KeyShortcut.ts'
+import '~/components/KeyShortcut.ts'
